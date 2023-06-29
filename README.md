@@ -1,4 +1,4 @@
-AI Pet Name Generator
+## AI Pet Name Generator
 
 Welcome to the AI Pet Name Generator repository! This project utilizes the power of artificial intelligence to generate unique and creative names for your beloved pets. Whether you have a dog, cat, bird, or any other furry or feathered friend, our AI algorithm will provide you with a paw-some name that perfectly matches their personality.
 
