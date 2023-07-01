@@ -1,0 +1,19 @@
+.header {
+  padding: 2rem 0;
+  border-bottom: 0.6rem solid  $colorWhite2;
+  @extend %smooth-transition;
+}
+
+.titleAndDogIconWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 1.5rem;
+
+  @extend %smooth-transition;
+  @include onTablet {
+    margin-bottom: 2rem;
+  }
+}

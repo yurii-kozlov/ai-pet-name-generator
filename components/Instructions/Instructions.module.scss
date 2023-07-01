@@ -1,0 +1,21 @@
+.text {
+  white-space: pre-line;
+  font-size: 1.4rem;
+
+  @extend %smooth-transition;
+  @include onTablet {
+    font-size: 1.6rem;
+  }
+  color: $colorGrey2;
+}
+
+.textCursor::after {
+  content: '|';
+  animation: cursor 1.1s infinite step-start;
+}
+
+@keyframes cursor {
+  50% {
+    opacity: 0;
+  }
+}
