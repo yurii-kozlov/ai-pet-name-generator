@@ -3,6 +3,23 @@
 /*#endregion */
 
 /*#region fontFamily */
-  $mainFontFamily: 'Roboto', 'sans-serif'
+  $mainFontFamily: 'Roboto', 'sans-serif';
 /*#endregion */
 
+/*#region mainBackground */
+  $mainBackgroundColor: linear-gradient(to right, rgb(182, 244, 146), rgb(51, 139, 147));
+/*#endregion */
+
+/*#region colorGreen */
+  $colorGreen: #e2f0de;
+/*#endregion */
+
+/*#region colorWhite */
+  $colorWhite: #fff;
+  $colorWhite2: rgba(255, 255, 255, 0.7);
+/*#endregion */
+
+/*#region colorGrey */
+  $colorGrey: #333333;
+  $colorGrey2: #1d1d1d;
+/*#endregion */
