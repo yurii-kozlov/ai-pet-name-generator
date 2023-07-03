@@ -1,13 +1,16 @@
 .text {
   white-space: pre-line;
   font-size: 1.4rem;
+  line-height: 170%;
 
   @extend %smooth-transition;
   @include onTablet {
     font-size: 1.6rem;
+    line-height: 200%;
   }
   color: $colorGrey2;
 }
+
 
 .textCursor::after {
   content: '|';
