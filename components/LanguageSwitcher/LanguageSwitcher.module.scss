@@ -1,0 +1,53 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.earthIcon {
+  animation: go-round 10s linear infinite;
+  transform-origin: left;
+  width: 2.5rem;
+  height: 2.5rem;
+
+  @extend %smooth-transition;
+  @include onTablet {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+@keyframes go-round {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.link {
+  font-size: 1.4rem;
+  color: $colorGrey2;
+  @extend %smooth-transition;
+
+  @include onTablet {
+    font-size: 1.7rem;
+  }
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.link:first-child::after {
+  content: '|';
+  margin-left: 0.5rem;
+  color: $colorGrey2;
+}
+
+.linksWrapper {
+  display: flex;
+  gap: 0.5rem;
+}

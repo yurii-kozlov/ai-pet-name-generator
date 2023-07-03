@@ -1,6 +1,6 @@
 .header {
   padding: 2rem 0;
-  border-bottom: 0.6rem solid  $colorWhite2;
+  border-bottom: 0.6rem solid $colorWhite2;
   @extend %smooth-transition;
 }
 
@@ -9,11 +9,16 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 0.6rem;
+  gap: 1.3rem;
   margin-bottom: 1.5rem;
 
   @extend %smooth-transition;
   @include onTablet {
     margin-bottom: 2rem;
+    gap: 1.5rem;
   }
 }
+
+// .dogIconWrapper {
+//   margin-bottom: 0.8rem;
+// }
