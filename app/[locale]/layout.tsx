@@ -3,6 +3,7 @@ import { Metadata } from 'next';
 import { Roboto } from 'next/font/google';
 import { NextIntlClientProvider, useLocale } from 'next-intl';
 import { notFound } from 'next/navigation';
+import { Footer } from 'components/Footer';
 import 'app/[locale]/globals.scss';
 
 type LocaleParams = {
@@ -54,7 +55,10 @@ export default async function RootLayout({
     <html lang={locale}>
       <body className={roboto.className}>
         <NextIntlClientProvider locale={locale} messages={messages}>
-          {children}
+          <main>
+            {children}
+          </main>
+          <Footer />
         </NextIntlClientProvider>
       </body>
     </html>

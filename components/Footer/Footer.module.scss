@@ -1,0 +1,44 @@
+.wrapper {
+  padding: 1.5rem 0;
+  @extend %smooth-transition;
+  display: flex;
+  justify-content: center;
+  
+  @include onTablet {
+    padding: 2rem 0;
+  }
+}
+
+.authorInfo {
+  text-align: center;
+  font-size: 2rem;
+  color: $colorGrey2;
+
+  @extend %smooth-transition;
+  
+  @include onTablet {
+    font-size: 2.5rem;
+  }
+}
+
+.authorAndFlagWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.flag {
+  @extend %smooth-transition;
+  border-radius: 40%;
+  width: 4rem;
+  height: 4rem;
+
+
+  @include onTablet {
+    width: 5rem;
+    height: 5rem;
+  }
+}
+
