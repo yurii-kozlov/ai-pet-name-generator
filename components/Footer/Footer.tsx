@@ -1,9 +1,9 @@
 import { ReactElement } from 'react';
-import { Container } from 'components/Container';
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
+import { Container } from 'components/Container';
 import ukFlag from 'images/UkFlag.gif';
 import styles from 'components/Footer/Footer.module.scss';
-import Image from 'next/image';
 
 export const Footer = (): ReactElement => {
   const translateFooter = useTranslations('Footer');
