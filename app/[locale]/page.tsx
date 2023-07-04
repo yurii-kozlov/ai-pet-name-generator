@@ -1,6 +1,6 @@
 import { ReactElement } from 'react';
-import { Header } from 'components/Header';
 import styles from 'app/[locale]/page.module.scss';
+import { Header } from 'components/Header';
 
 export default function Home(): ReactElement {
   return (
