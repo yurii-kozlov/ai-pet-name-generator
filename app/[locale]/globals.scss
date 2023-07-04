@@ -6,7 +6,7 @@
 body {
   margin: 0;
   font-family: $mainFontFamily;
-  background: $mainBackgroundColor;
+  // background: $mainBackgroundColor;
 }
 
 html {
@@ -16,6 +16,18 @@ html {
   scroll-behavior: smooth;
   overflow-x: hidden;
   font-size: $mainFontSize;
+}
+
+html,
+body {
+  color: #000;
+  background: #fff;
+}
+
+[data-theme='dark'],
+[data-theme='dark'] body {
+  color: green;
+  background: $mainBackgroundColor;
 }
 
 div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, th, td {

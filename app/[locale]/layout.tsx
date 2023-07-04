@@ -4,6 +4,7 @@ import { Roboto } from 'next/font/google';
 import { NextIntlClientProvider, useLocale } from 'next-intl';
 import { notFound } from 'next/navigation';
 import { Footer } from 'components/Footer';
+import { ThemeProvider2 } from 'components/ThemeProvider2';
 import 'app/[locale]/globals.scss';
 
 type LocaleParams = {
@@ -52,14 +53,16 @@ export default async function RootLayout({
   }
 
   return (
-    <html lang={locale}>
+    <html lang={locale} suppressHydrationWarning>
       <body className={roboto.className}>
-        <NextIntlClientProvider locale={locale} messages={messages}>
-          <main>
-            {children}
-          </main>
-          <Footer />
-        </NextIntlClientProvider>
+        <ThemeProvider2>
+          <NextIntlClientProvider locale={locale} messages={messages}>
+            <main>
+              {children}
+            </main>
+            <Footer />
+          </NextIntlClientProvider>
+        </ThemeProvider2>
       </body>
     </html>
   );
