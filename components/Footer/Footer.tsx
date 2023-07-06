@@ -1,12 +1,16 @@
-import { ReactElement } from 'react';
-import {getTranslator} from 'next-intl/server';
+import { FC, ReactElement } from 'react';
 import Image from 'next/image';
+import { useTranslation } from 'app/i18n';
 import { Container } from 'components/Container';
 import ukFlag from 'images/UkFlag.gif';
 import styles from 'components/Footer/Footer.module.scss';
 
-export const Footer = async (): Promise<ReactElement> => {
-  const translateFooter = await getTranslator('Footer');
+type FooterProps = {
+  language: string
+}
+
+export const Footer: FC<FooterProps> = async ({ language }): Promise<ReactElement> => {
+  const { t: translateFooter } = await useTranslation(language, 'footer');
   const authorName = translateFooter('authorName');
   const createdBy = translateFooter('createdBy');
 

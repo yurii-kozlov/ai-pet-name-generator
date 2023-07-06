@@ -1,20 +1,28 @@
 import { ReactElement, ReactNode } from 'react';
 import { Metadata } from 'next';
+import { dir } from 'i18next';
 import { Roboto } from 'next/font/google';
-import { NextIntlClientProvider, useLocale } from 'next-intl';
-import { notFound } from 'next/navigation';
+import { languages } from 'app/i18n/settings';
 import { Footer } from 'components/Footer';
 import { ThemeProvider2 } from 'components/ThemeProvider2';
-import 'app/[locale]/globals.scss';
+import 'app/[lng]/globals.scss';
 
 type LocaleParams = {
   params: {
-    locale: string
+    lng: string
   }
 }
 
+type StaticParams = {
+  lng: string
+}
+
+export async function generateStaticParams(): Promise<StaticParams[]> {
+  return languages.map((lng) => ({ lng }))
+}
+
 export function generateMetadata({ params }:LocaleParams): Metadata {
-  return params.locale === 'en'
+  return params.lng === 'en'
   ? {
     title: 'Pet Name Generator',
     description: 'Generate your pet\'s name'
@@ -36,32 +44,19 @@ export default async function RootLayout({
 }: {
   children: ReactNode,
   params: {
-    locale: string
+    lng: string
   }
 }): Promise<ReactElement> {
-  const locale = useLocale();
-  let messages;
-
-  try {
-    messages = (await import(`../../messages/${locale}.json`)).default;
-  } catch (error) {
-    notFound();
-  }
-
-  if (params.locale !== locale) {
-    notFound();
-  }
+  const { lng: language } = params;
 
   return (
-    <html lang={locale} suppressHydrationWarning>
+    <html dir={dir(language)} lang={language}>
       <body className={roboto.className}>
         <ThemeProvider2>
-          <NextIntlClientProvider locale={locale} messages={messages}>
-            <main>
-              {children}
-            </main>
-            <Footer />
-          </NextIntlClientProvider>
+          <main>
+            {children}
+          </main>
+          <Footer language={language}/>
         </ThemeProvider2>
       </body>
     </html>

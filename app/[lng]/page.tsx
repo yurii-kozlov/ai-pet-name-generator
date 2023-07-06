@@ -1,15 +1,20 @@
-'use client';
-
 import { ReactElement } from 'react';
-import styles from 'app/[locale]/page.module.scss';
+import styles from 'app/[lng]/page.module.scss';
 import { Header } from 'components/Header';
 import { ThemeModeSwitcher } from 'components/ThemeModeSwitcher';
 
-export default function Home(): ReactElement {
+type StaticParams = {
+  params: {
+    lng: string
+  }
+}
+
+export default async function Home({params: {lng}}: StaticParams): Promise<ReactElement> {
+
   return (
     <div className={styles.wrapper}>
-      <Header />
+      <Header language={lng}/>
       <ThemeModeSwitcher />
     </div>
-  )
+  );
 };
