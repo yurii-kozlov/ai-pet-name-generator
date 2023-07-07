@@ -14,7 +14,9 @@ export default async function Home({params: {lng}}: StaticParams): Promise<React
   return (
     <div className={styles.wrapper}>
       <Header language={lng}/>
-      <ThemeModeSwitcher />
+      <div className={styles.themeModeSwitcherWrapper}>
+        <ThemeModeSwitcher />
+      </div>
     </div>
   );
 };

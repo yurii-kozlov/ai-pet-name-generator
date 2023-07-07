@@ -50,7 +50,7 @@ export default async function RootLayout({
   const { lng: language } = params;
 
   return (
-    <html dir={dir(language)} lang={language}>
+    <html dir={dir(language)} lang={language} suppressHydrationWarning>
       <body className={roboto.className}>
         <ThemeProvider2>
           <main>

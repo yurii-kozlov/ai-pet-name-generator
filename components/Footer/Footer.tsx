@@ -19,7 +19,7 @@ export const Footer: FC<FooterProps> = async ({ language }): Promise<ReactElemen
       <footer className={styles.wrapper}>
         <div className={styles.authorAndFlagWrapper}>
           <p className={styles.authorInfo}>{createdBy} &copy;{authorName}</p>
-          <Image alt='Flag of Ukraine' className={styles.flag} src={ukFlag}/>
+          <Image alt='Flag of Ukraine' className={styles.flag} src={ukFlag} priority/>
         </div>
       </footer>
     </Container>

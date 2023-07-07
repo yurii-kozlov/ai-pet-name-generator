@@ -29,7 +29,6 @@
 
 .link {
   font-size: 1.4rem;
-  color: $colorGrey2;
   @extend %smooth-transition;
 
   @include onTablet {
@@ -44,7 +43,6 @@
 .link:first-child::after {
   content: '|';
   margin-left: 0.5rem;
-  color: $colorGrey2;
 }
 
 .linksWrapper {

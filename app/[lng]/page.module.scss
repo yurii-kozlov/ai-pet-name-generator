@@ -1,10 +1,16 @@
-.title {
-  font-size: 1.5rem;
-  color: green;
+.wrapper {
+  min-height: 70vh;
+  border-bottom: 0.6rem solid $colorWhite2;
+}
+
+.themeModeSwitcherWrapper {
+  position: absolute;
+  top: 3%;
+  right: 5%;
 
   @extend %smooth-transition;
 
   @include onTablet {
-    font-size: 3rem;
+    top: 5%;
   }
 }

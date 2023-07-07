@@ -2,7 +2,6 @@
   text-align: center;
   @extend %smooth-transition;
   font-size: 3.2rem;
-  color: $colorGrey;
 
   @include onTablet {
     font-size: 4rem;

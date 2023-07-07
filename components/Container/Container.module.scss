@@ -3,6 +3,7 @@
   max-width: 190rem;
   padding: 0 1.5rem;
   box-sizing: border-box;
+  @extend %smooth-transition;
 
   @include onTablet {
     padding: 0 2rem;
