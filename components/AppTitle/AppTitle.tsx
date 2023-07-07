@@ -1,15 +1,18 @@
 'use client';
 
-import { ReactElement } from 'react';
+import { FC, ReactElement } from 'react';
 import { v4 as uuid_v4 } from 'uuid';
-import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'app/i18n/client';
 import styles from 'components/AppTitle/AppTitle.module.scss';
 
-export const AppTitle = (): ReactElement => {
+type AppTitleProps = {
+  language: string
+}
 
-  const t = useTranslations('Index');
-  const title = t('title');
+export const AppTitle: FC<AppTitleProps> = ({ language }): ReactElement => {
+  const { t: translageHomePage } = useTranslation(language, 'home-page');
+  const title = translageHomePage('title');
   const words = title.split(' ');
 
   return (

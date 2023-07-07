@@ -1,0 +1,24 @@
+.button {
+  border: none;
+  border-radius: 0.4rem;
+
+  @extend %smooth-transition;
+}
+
+.buttonSetDark {
+  background-color: transparent;
+  color: $colorGrey2;
+}
+
+.buttonSetDark:is(:hover, :focus) {
+  background-color: $colorWhite3;
+}
+
+.buttonSetLight {
+  background-color: transparent;
+  color: $colorYellow;
+}
+
+.buttonSetLight:is(:hover, :focus) {
+  background-color: $colorGrey2;
+}

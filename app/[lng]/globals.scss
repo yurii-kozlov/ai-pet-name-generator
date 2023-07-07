@@ -6,16 +6,27 @@
 body {
   margin: 0;
   font-family: $mainFontFamily;
-  background: $mainBackgroundColor;
 }
 
 html {
   margin: 0;
-  padding: 0; 
+  padding: 0;
   height: 100%;
   scroll-behavior: smooth;
   overflow-x: hidden;
   font-size: $mainFontSize;
+}
+
+html,
+body {
+  color: $colorGrey2;
+  background: $mainBackgroundColorLight;
+}
+
+[data-theme='dark'],
+[data-theme='dark'] body {
+  color: $colorWhite;
+  background: $mainBackgroundColorDark;
 }
 
 div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, th, td {
