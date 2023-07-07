@@ -4,7 +4,7 @@ import { dir } from 'i18next';
 import { Roboto } from 'next/font/google';
 import { languages } from 'app/i18n/settings';
 import { Footer } from 'components/Footer';
-import { ThemeProvider2 } from 'components/ThemeProvider2';
+import { ThemeProvider } from 'components/ThemeProvider';
 import 'app/[lng]/globals.scss';
 
 type LocaleParams = {
@@ -52,12 +52,12 @@ export default async function RootLayout({
   return (
     <html dir={dir(language)} lang={language} suppressHydrationWarning>
       <body className={roboto.className}>
-        <ThemeProvider2>
+        <ThemeProvider>
           <main>
             {children}
           </main>
           <Footer language={language}/>
-        </ThemeProvider2>
+        </ThemeProvider>
       </body>
     </html>
   );
