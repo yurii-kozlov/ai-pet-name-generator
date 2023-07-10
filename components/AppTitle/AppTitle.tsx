@@ -7,7 +7,7 @@ import { useTranslation } from 'app/i18n/client';
 import styles from 'components/AppTitle/AppTitle.module.scss';
 
 type AppTitleProps = {
-  language: string
+  language: string;
 }
 
 export const AppTitle: FC<AppTitleProps> = ({ language }): ReactElement => {
