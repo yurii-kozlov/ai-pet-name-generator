@@ -1,5 +1,5 @@
 .wrapper {
-  min-height: 70vh;
+  // min-height: 70vh;
   border-bottom: 0.6rem solid $colorWhite2;
 }
 
@@ -12,5 +12,17 @@
 
   @include onTablet {
     top: 5%;
+  }
+}
+
+.petNameGeneratorFormWrapper {
+  padding: 5rem 0;
+  min-height: 20rem;
+
+  @extend %smooth-transition;
+
+  @include onTablet {
+    padding: 6.5rem 0;
+    min-height: 25rem;
   }
 }

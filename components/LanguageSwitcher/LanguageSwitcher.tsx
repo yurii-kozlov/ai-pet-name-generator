@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEarthEurope } from '@fortawesome/free-solid-svg-icons';
 import { useTranslation } from 'app/i18n/client';
 import { useRouter } from 'next/navigation';
+import { Theme } from 'enums/Theme';
 import styles from 'components/LanguageSwitcher/LanguageSwitcher.module.scss';
 
 type LocaleProps = {
@@ -22,7 +23,7 @@ export const LanguageSwitcher: FC<LocaleProps> = ({ language }): ReactElement =>
 
 
   const handleUkrLanguageSwitch = (): void => {
-    setTheme(theme || 'dark');
+    setTheme(theme || Theme.Dark);
 
 
     router.prefetch('/en');
@@ -30,7 +31,7 @@ export const LanguageSwitcher: FC<LocaleProps> = ({ language }): ReactElement =>
   }
 
   const handleEngLanguageSwitch = (): void => {
-    setTheme(theme || 'dark');
+    setTheme(theme || Theme.Dark);
     router.prefetch('/uk');
     router.refresh()
   }
