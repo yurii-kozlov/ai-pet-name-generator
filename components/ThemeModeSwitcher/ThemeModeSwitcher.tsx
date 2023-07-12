@@ -4,14 +4,15 @@ import { useTheme } from 'next-themes';
 import { ReactElement, useEffect, useState } from 'react';
 import { Moon, Sun } from 'tabler-icons-react';
 import cn from 'classnames';
+import { Theme } from 'enums/Theme';
 import styles from 'components/ThemeModeSwitcher/ThemeModeSwitcher.module.scss';
 
 export const ThemeModeSwitcher = (): ReactElement | null => {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
-  const setLightTheme = (): void => setTheme('light');
-  const setDarkTheme = (): void => setTheme('dark');
+  const setLightTheme = (): void => setTheme(Theme.Light);
+  const setDarkTheme = (): void => setTheme(Theme.Dark);
 
   useEffect(() => {
     setMounted(true)
@@ -23,7 +24,7 @@ export const ThemeModeSwitcher = (): ReactElement | null => {
 
   return (
     <div>
-      {theme === 'light' ? (
+      {theme === Theme.Light ? (
         <button
           className={cn(styles.button, styles.buttonSetDark)}
           onClick={setDarkTheme}

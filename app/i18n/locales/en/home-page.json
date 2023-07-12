@@ -2,5 +2,7 @@
   "title": "Name my pet",
   "languageEnglish": "English",
   "languageUkrainian": "Українська",
-  "instructions": "I. Please provide the text associated with your pet (e.g pet description). \nII. Click the 'generate' button. \nIII. Choose the name you liked the most. \nWishing you happiness with your furry friend!"
+  "instructions": "I. Please provide the text associated with your pet (e.g pet description). \nII. Click the 'generate' button. \nIII. Choose the name you liked the most. \nWishing you happiness with your furry friend!",
+  "petNameGeneratorInputPlaceholder": "Enter your pet's description or story",
+  "submitButton": "Generate names"
 }

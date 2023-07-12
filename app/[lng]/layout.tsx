@@ -3,6 +3,7 @@ import { Metadata } from 'next';
 import { dir } from 'i18next';
 import { Roboto } from 'next/font/google';
 import { languages } from 'app/i18n/settings';
+import { Language } from 'enums/Language';
 import { Footer } from 'components/Footer';
 import { ThemeProvider } from 'components/ThemeProvider';
 import 'app/[lng]/globals.scss';
@@ -22,7 +23,7 @@ export async function generateStaticParams(): Promise<StaticParams[]> {
 }
 
 export function generateMetadata({ params }:LocaleParams): Metadata {
-  return params.lng === 'en'
+  return params.lng === Language.English
   ? {
     title: 'Pet Name Generator',
     description: 'Generate your pet\'s name'

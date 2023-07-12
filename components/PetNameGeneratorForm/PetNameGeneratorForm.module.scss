@@ -1,0 +1,104 @@
+.form {
+  @extend %smooth-transition;
+  display: flex;
+  justify-content: center;
+}
+
+.inputAndSubmitButtonWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  gap: 2.4rem;
+  width: 75%;
+
+  @extend %smooth-transition;
+
+  @include onTablet {
+    width: 35rem;
+    gap: 2.8rem;
+  }
+}
+
+.inputWrapper {
+  position: relative;
+}
+
+.input {
+  height: 4rem;
+  width: 100%;
+  padding: 1rem;
+  border: 0.14rem solid transparent;
+  border-radius: 0.5rem;
+  font-size: 1.3rem;
+  @extend %smooth-transition;
+  margin-bottom: 0.2rem;
+
+  @include onTablet {
+    height: 4.5rem;
+    padding: 1.5rem;
+    font-size: 1.5rem;
+  }
+}
+
+.inputLightTheme {
+  outline: none;
+  background-color: $colorWhite;
+  outline: 0.1rem solid transparent;
+}
+
+.inputLightTheme:is(:hover, :focus) {
+  border: 0.14rem solid $colorGreen1;
+  outline: 0.14rem solid $colorGreen1;
+}
+
+.inputDarkTheme {
+  background-color: $colorDarkBlue;
+}
+
+.inputDarkTheme:is(:hover,:focus) {
+  background-color: $colorDarkBlue1;
+}
+
+.submitButtonLightTheme {
+  color: $colorWhite;
+  background-color: $colorGreen2;
+}
+
+.submitButtonLightTheme:is(:hover, :focus) {
+  background-color: $colorGreen3;
+}
+
+.submitButtonDarkTheme {
+  background-color: $colorBlack;
+}
+
+.submitButtonDarkTheme:is(:hover,:focus) {
+  background-color: $colorBlack1;
+}
+
+.submitButton {
+  height: 4rem;
+  font-size: 1.3rem;
+  border-radius: 0.5rem;
+  padding: 0;
+  border: none;
+
+  @extend %smooth-transition;
+
+  @include onTablet {
+    height: 4.5rem;
+    font-size: 1.5rem;
+  }
+}
+
+.error {
+  position: absolute;
+  font-size: 1.1rem;
+  color: $colorDanger;
+
+  @extend %smooth-transition;
+  @include onTablet {
+    font-size: 1.3rem;
+  }
+}
