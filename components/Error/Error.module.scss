@@ -1,0 +1,12 @@
+.title {
+  color: $colorDanger;
+  font-weight: $fontWeightRegular;
+  text-align: center;
+
+  @extend %smooth-transition;
+  font-size: 1.4rem;
+
+  @include onTablet {
+    font-size: 1.9rem
+  }
+}
