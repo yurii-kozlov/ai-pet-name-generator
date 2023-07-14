@@ -1,3 +1,14 @@
+.section {
+  min-height: 20vh;
+  display: grid;
+  align-items: center;
+  @extend %smooth-transition;
+
+  @include onTablet {
+    min-height: 0;
+  }
+}
+
 .form {
   @extend %smooth-transition;
   display: flex;
