@@ -2,7 +2,10 @@
   padding: 2rem 0;
   border-bottom: 0.6rem solid $colorWhite2;
   @extend %smooth-transition;
-  min-height: 47vh;
+
+  @include onTablet {
+    min-height: 47vh;
+  }
 }
 
 .titleAndDogIconWrapper {
