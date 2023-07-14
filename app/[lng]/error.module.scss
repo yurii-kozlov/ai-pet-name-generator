@@ -1,0 +1,19 @@
+.wrapper {
+  padding: 3rem 0;
+
+  @extend %smooth-transition;
+  @include onTablet {
+    padding: 6rem 0;
+  }
+}
+
+.title {
+  text-align: center;
+  font-size: 1.4rem;
+  color: $colorDanger;
+
+  @extend %smooth-transition;
+  @include onTablet {
+    font-size: 1.9rem
+  }
+}

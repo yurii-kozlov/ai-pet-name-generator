@@ -21,5 +21,5 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
 
   return NextResponse.json({
     bardResponse: queryBardValidResponse.content
-  }, { status: 200, statusText: 'successful request' })
-}
+  }, { status: 200, statusText: 'successful request' });
+};
