@@ -4,6 +4,15 @@
   justify-content: center;
 }
 
+.formWrapper {
+  margin-bottom: 2.2rem;
+  @extend %smooth-transition;
+
+  @include onTablet {
+    margin-bottom: 2.6rem;
+  }
+}
+
 .inputAndSubmitButtonWrapper {
   display: flex;
   flex-direction: column;
@@ -92,6 +101,10 @@
   }
 }
 
+.submitButton:disabled {
+  opacity: 0.4;
+}
+
 .error {
   position: absolute;
   font-size: 1.1rem;
@@ -100,5 +113,54 @@
   @extend %smooth-transition;
   @include onTablet {
     font-size: 1.3rem;
+  }
+}
+
+.errorWrapper {
+  margin-top: 1rem;
+}
+
+.reponse {
+  text-align: center;
+  font-size: 1.3rem;
+  @extend %smooth-transition;
+  white-space: pre-line;
+  animation: textAppear 2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+  @include onTablet {
+    font-size: 1.5rem;
+  }
+}
+
+@keyframes textAppear {
+  0% {
+    opacity: 0;
+    transform: translateY(50px) rotateX(-20deg);
+  }
+  
+  50% {
+    opacity: 0.8;
+    transform: translateY(0) rotateX(0);
+  }
+  
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotateX(0);
+  }
+}
+
+.loaderWrapper {
+  animation: loaderAppear 1s ease-in;
+}
+
+@keyframes loaderAppear {
+  0% {
+    opacity: 0;
+    scale: 0;
+  }
+
+  100% {
+    opacity: 1;
+    scale: 1;
   }
 }

@@ -19,7 +19,7 @@ export default async function Home({params: {lng}}: StaticParams): Promise<React
       <div className={styles.themeModeSwitcherWrapper}>
         <ThemeModeSwitcher />
       </div>
-      <div className={styles.petNameGeneratorFormWrapper}>
+      <div className={styles.petNameGeneratorSectionWrapper}>
         <Container>
           <PetNameGeneratorForm language={lng}/>
         </Container>
