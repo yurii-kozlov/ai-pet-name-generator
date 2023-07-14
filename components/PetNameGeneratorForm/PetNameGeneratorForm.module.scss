@@ -124,6 +124,7 @@
   text-align: center;
   font-size: 1.3rem;
   @extend %smooth-transition;
+  line-height: 140%;
   white-space: pre-line;
   animation: textAppear 2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
