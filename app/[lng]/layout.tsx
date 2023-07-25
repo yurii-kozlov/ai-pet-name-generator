@@ -26,10 +26,16 @@ export function generateMetadata({ params }:LocaleParams): Metadata {
   return params.lng === Language.English
   ? {
     title: 'Pet Name Generator',
-    description: 'Generate your pet\'s name'
+    description: 'Generate your pet\'s name',
+    manifest: '/api/en',
+    viewport: 'width=device-width, initial-scale=1',
+    themeColor: '#ffffff',
   } : {
     title: 'Генератор імен для домашніх улюбленців',
-    description: 'Згенеруй ім\'я для свого улюбленця'
+    description: 'Згенеруй ім\'я для свого улюбленця',
+    manifest: '/api/en',
+    viewport: 'width=device-width, initial-scale=1',
+    themeColor: '#ffffff',
   }
 }
 
@@ -53,6 +59,8 @@ export default async function RootLayout({
   return (
     <html dir={dir(language)} lang={language} suppressHydrationWarning>
       <body className={roboto.className}>
+        {/* <link href="/manifest.json" rel="manifest" />
+        <link href="/apple-icon.png" rel="apple-touch-icon" sizes="128x128" /> */}
         <ThemeProvider>
           <main>
             {children}
@@ -60,6 +68,7 @@ export default async function RootLayout({
           <Footer language={language}/>
         </ThemeProvider>
       </body>
+      <script src="api/en/sw" type="module" async />
     </html>
   );
 };

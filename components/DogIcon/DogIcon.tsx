@@ -19,6 +19,9 @@ export const DogIcon = (): ReactElement => {
   };
 
   return (
-    <FaDog className={cn(styles.icon, {[styles.dogRunAnimation]: isDogIconClicked})} onClick={triggerDogRunAnimation}/>
+    <FaDog
+      className={cn(styles.icon, {[styles.dogRunAnimation]: isDogIconClicked})}
+      onClick={triggerDogRunAnimation}
+    />
   );
-}
+};

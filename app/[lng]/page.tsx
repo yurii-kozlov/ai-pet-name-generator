@@ -15,6 +15,7 @@ export default async function Home({params: {lng}}: StaticParams): Promise<React
 
   return (
     <div className={styles.wrapper}>
+      <meta content="#333" name="theme-color" />
       <Header language={lng}/>
       <div className={styles.themeModeSwitcherWrapper}>
         <ThemeModeSwitcher />
