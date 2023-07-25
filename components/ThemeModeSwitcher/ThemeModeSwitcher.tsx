@@ -26,6 +26,7 @@ export const ThemeModeSwitcher = (): ReactElement | null => {
     <div>
       {theme === Theme.Light ? (
         <button
+          aria-label="set dark theme"
           className={cn(styles.button, styles.buttonSetDark)}
           onClick={setDarkTheme}
           type="button"
@@ -34,6 +35,7 @@ export const ThemeModeSwitcher = (): ReactElement | null => {
         </button>
       ): (
         <button
+          aria-label="set light theme"
           className={cn(styles.button, styles.buttonSetLight)}
           onClick={setLightTheme}
           type="button"

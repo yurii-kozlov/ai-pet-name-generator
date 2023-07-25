@@ -1,8 +1,7 @@
 import { FC, ReactElement } from 'react';
-import Image from 'next/image';
 import { useTranslation } from 'app/i18n';
 import { Container } from 'components/Container';
-import ukFlag from 'images/UkFlag.gif';
+import { flagVideos } from 'constants/flagVideos';
 import styles from 'components/Footer/Footer.module.scss';
 
 type FooterProps = {
@@ -14,12 +13,17 @@ export const Footer: FC<FooterProps> = async ({ language }): Promise<ReactElemen
   const authorName = translateFooter('authorName');
   const createdBy = translateFooter('createdBy');
 
+  const { webm: webmFlagLink, mpeg: mpegFlagLink } = flagVideos;
+
   return (
     <Container>
       <footer className={styles.wrapper}>
         <div className={styles.authorAndFlagWrapper}>
           <p className={styles.authorInfo}>{createdBy} &copy;{authorName}</p>
-          <Image alt='Flag of Ukraine' className={styles.flag} src={ukFlag} priority/>
+          <video className={styles.flag} autoPlay loop muted playsInline>
+            <source src={webmFlagLink} type="video/webm" />
+            <source src={mpegFlagLink} type="video/mp4" />
+          </video>
         </div>
       </footer>
     </Container>
