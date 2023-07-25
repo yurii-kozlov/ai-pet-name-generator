@@ -1,8 +1,9 @@
 import { NextResponse } from 'next/server';
 import fs from 'fs';
+import path from 'path';
 
 export async function GET(): Promise<Response> {
-  const manifestPath = `public/manifest.json`;
+  const manifestPath = path.join(process.cwd(), 'public', 'manifest.json');
 
   try {
     const data = fs.readFileSync(manifestPath, 'utf8');
